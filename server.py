@@ -60,6 +60,6 @@ if __name__ == '__main__':
     finally:
         srv.close()
         loop.run_until_complete(srv.wait_closed())
-        loop.run_until_complete(handler.finish_connections(1.0))
+        loop.run_until_complete(handle.finish_connections(1.0))
         loop.run_until_complete(the_app.cleanup())
         loop.close()
